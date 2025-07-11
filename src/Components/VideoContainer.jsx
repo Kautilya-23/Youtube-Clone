@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { YOUTUBE_VIDEOS_API } from "../utils/Constants";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 
 const VideoContainer = () => {
@@ -17,7 +18,9 @@ const VideoContainer = () => {
         setVideos(json?.items);
     };
 
-    return(
+    return videos.length === 0 ? (
+    <Shimmer />
+  ) : (
         <div className="flex flex-wrap cursor-pointer">
             {videos.map((video) => (
                 <Link key={video.id} to={"watch?v=" + video.id}> 

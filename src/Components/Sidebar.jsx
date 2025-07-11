@@ -41,7 +41,7 @@ const Sidebar = () => {
             &nbsp;&nbsp;Home
           </div>
         </Link>
-        <div className="flex m-2 px-2 py-1 rounded-lg hover:bg-gray-100  cursor-pointer">
+        <div className="flex m-2 px-2 py-1 rounded-lg hover:bg-gray-100 cursor-pointer">
           <MdOutlineSlowMotionVideo className="text-xl cursor-pointer text-[20px]" />{" "}
           &nbsp;&nbsp;Shorts
         </div>
